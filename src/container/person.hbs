@@ -69,94 +69,87 @@
 					<br>
 					<hr>
 					
-					<p>
-						<div>
-							{{> title data="Projects" big=false}}
-						</div>
+					
+					<div>
+						{{> title data="Projects" big=false}}
+					</div>
 
-						<div>
-							{{#each projects}}
-								<strong>{{name}}</strong>
+					<div>
+						{{#each projects}}
+							<strong>{{name}}</strong>
+							<br />
+							{{description}}
+							<br />
+							<i>{{status}}</i>
 								<br />
-								{{description}}
 								<br />
-								<i>{{status}}</i>
-									<br />
-									<br />
 
-								<div>
-									{{> title data="Teams" big=false}}
-								</div>
-								
-								<div>
-									{{#each teams}}
-										<b>{{team_name}}</b>
+							<div>
+								{{> title data="Teams" big=false}}
+							</div>
+							
+							<div>
+								{{#each teams}}
+									<b>{{team_name}}</b>
+									<br>
+									<br>
+									<div>
+										{{#with team_leader}}
+											<i>{{name}}</i>
+											<br>
+											<strong>{{title}}</strong>
+											<br>
+											{{email}}
+										{{/with}}
 										<br>
 										<br>
-										<div>
-											{{#with team_leader}}
-												<i>{{name}}</i>
-												<br>
-												<strong>{{title}}</strong>
-												<br>
-												{{email}}
-											{{/with}}
+										{{#each team_members}}
+											<i>{{name}}</i>
+											<br>
+											{{title}}
+											<br>
+											{{email}}
+											<br>
+											{{skills}}
 											<br>
 											<br>
-											{{#each team_members}}
-												<i>{{name}}</i>
+											
+											{{#each projects}}
+												<b>{{name}}</b>
 												<br>
-												{{title}}
+												{{description}}
 												<br>
-												{{email}}
-												<br>
-												{{skills}}
-												<br>
-												<br>
-
-												<p>
-													{{#each projects}}
-														<b>{{name}}</b>
-														<br>
-														{{description}}
-														<br>
-														<ul>
-															{{#each technologies}}
-																<li>{{this}}</li>
-															{{/each}}
-														</ul>
-																																										
-														<b>Team members</b>
-														<br>
-
-														{{#each team_members}}
-															<i>{{name}}</i>
-															<br>
-															{{title}}
-															<br>
-															<br>
-
-														{{/each}}
-
+												<ul>
+													{{#each technologies}}
+														<li>{{this}}</li>
 													{{/each}}
-												</p>
+												</ul>
+																																								
+												<b>Team members</b>
+												<br>
+
+												{{#each team_members}}
+													<i>{{name}}</i>
+													<br>
+													{{title}}
+													<br>
+													<br>
+
+												{{/each}}
 
 											{{/each}}
-										</div>
+											
+										{{/each}}
+									</div>
 
-									{{/each}}
-								</div>
+								{{/each}}
+							</div>
 
-
-
-							{{/each}}
-						</div>
-					</p>
-				
+						{{/each}}
+					</div>
+								
 				{{/each}}
-				
-				
-
+			
         {{/each}}
       </div>
 
