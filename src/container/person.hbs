@@ -1,0 +1,170 @@
+{{! 
+Це код container файлу для education сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/education"
+}}
+
+<div>
+  {{#with person}}
+    <div>
+      <h1>{{name}}</h1>
+      <h3>{{gender}}, {{age}}</h3>
+
+      <div>
+        <address>
+          {{#with address}}
+            {{street}},
+            {{city}},
+            {{state}},
+            {{zip}},
+            {{country}},
+          {{/with}}
+        </address>
+      </div>
+      <hr />
+
+      <div>
+		{{> title data="Education" big=false}}
+      </div>
+
+      <div>
+        {{#each education}}
+          {{degree}},
+          {{major}},
+          <br />
+          {{university}},
+          ({{graduationYear}})
+        {{/each}}
+      </div>
+      <hr />
+
+	  <div>
+		{{> title data="Work experience" big=false}}
+      </div>
+
+	  <div>
+			{{#each workExperience}}
+			<strong>{{company}}</strong>
+			({{industry}}, {{year_founded}})
+			<br />
+			{{title}}
+			<br />
+			{{startDate}} - 
+			{{endDate}}
+				<br />
+				<br />
+
+			<em><b>Responsibilities</b></em>
+				<ul>
+					{{#each responsibilities}}
+						<li>{{this}}</li>
+					{{/each}}
+				</ul>
+				
+			<em><b>Recommendation letter from</b></em>
+				<br>
+				{{#each employees}}
+					{{name}}
+					<br>
+					{{position}}, {{department}}
+					<br>
+					<hr>
+					
+					<p>
+						<div>
+							{{> title data="Projects" big=false}}
+						</div>
+
+						<div>
+							{{#each projects}}
+								<strong>{{name}}</strong>
+								<br />
+								{{description}}
+								<br />
+								<i>{{status}}</i>
+									<br />
+									<br />
+
+								<div>
+									{{> title data="Teams" big=false}}
+								</div>
+								
+								<div>
+									{{#each teams}}
+										<b>{{team_name}}</b>
+										<br>
+										<br>
+										<div>
+											{{#with team_leader}}
+												<i>{{name}}</i>
+												<br>
+												<strong>{{title}}</strong>
+												<br>
+												{{email}}
+											{{/with}}
+											<br>
+											<br>
+											{{#each team_members}}
+												<i>{{name}}</i>
+												<br>
+												{{title}}
+												<br>
+												{{email}}
+												<br>
+												{{skills}}
+												<br>
+												<br>
+
+												<p>
+													{{#each projects}}
+														<b>{{name}}</b>
+														<br>
+														{{description}}
+														<br>
+														<ul>
+															{{#each technologies}}
+																<li>{{this}}</li>
+															{{/each}}
+														</ul>
+																																										
+														<b>Team members</b>
+														<br>
+
+														{{#each team_members}}
+															<i>{{name}}</i>
+															<br>
+															{{title}}
+															<br>
+															<br>
+
+														{{/each}}
+
+													{{/each}}
+												</p>
+
+											{{/each}}
+										</div>
+
+									{{/each}}
+								</div>
+
+
+
+							{{/each}}
+						</div>
+					</p>
+				
+				{{/each}}
+				
+				
+
+        {{/each}}
+      </div>
+
+    </div>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
