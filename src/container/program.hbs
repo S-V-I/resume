@@ -1,0 +1,123 @@
+{{! 
+Це код container файлу для сторінки bio, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+
+<div>
+  <h1>
+    Excursion. Beautiful Paris.
+  </h1>
+</div>
+
+<div>
+  {{#with program}}
+    {{#with excursion}}
+      <h3>{{name}}</h3>
+      {{#with location}}
+        {{city}},
+        {{country}}
+      {{/with}}
+      <br />
+      {{date}}
+
+      <ul>
+        {{#each program}}
+          <li>
+            {{name}},
+            {{type}}
+            ({{duration}}
+            hours)
+            <br />
+            <br />
+
+            {{#with details}}
+              {{#with museum}}
+                <b>{{name}}</b>
+                <br />
+                {{#with location}}
+                  {{address}},
+                  {{city}},
+                  {{country}}
+                {{/with}}
+
+                <br />
+                <br />
+
+                <strong><em>Exhibits</em></strong>
+                <br />
+                <ul>
+                  {{#each exhibits}}
+                    <li>
+                      {{name}}
+                      <br />
+                      {{#if artist}}
+                        {{artist}}
+                      {{else}}
+                        Artist unknown
+                      {{/if}}
+                      <br />
+                      {{description}}
+                      <br />
+                      {{#if audio_guide}}
+                        Audio guide
+                      {{/if}}
+                      <br />
+                    </li>
+                    <br />
+                  {{/each}}
+
+                </ul>
+
+              {{/with}}
+
+              <b>Guide</b>
+              <br />
+              {{#with guide}}
+                {{name}},
+                {{language}}
+                <br />
+                Rating
+                {{rating}}
+              {{/with}}
+              <br />
+              <br />
+
+              {{#with venue}}
+                <b>{{name}}</b>,
+                <br />
+                {{#with location}}
+                  {{address}},
+                  {{city}},
+                  {{country}}
+                {{/with}}
+              {{/with}}
+              <br />
+              <br />
+
+              <ul>
+                {{#each performers}}
+
+                  <li>
+
+                    {{name}},
+                    <br />
+                    {{type}}
+                  </li>
+                  <br />
+                {{/each}}
+              </ul>
+
+            {{/with}}
+          </li>
+        {{/each}}
+      </ul>
+
+    {{/with}}
+
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
