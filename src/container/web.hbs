@@ -1,0 +1,103 @@
+{{! 
+Це код container файлу для сторінки bio, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+<h1>Main web development languages</h1>
+
+<div>
+  {{#with web}}
+    <ul>
+      {{#each languages}}
+        <li>
+          <h3>{{name}}</h3>
+          <br />
+          <i>Version:</i>
+          {{version}}
+          <br />
+          <br />
+          <p>{{description}}</p>
+
+          <div>
+            <ul>
+              {{#each elements}}
+                <li>
+                  <b>{{name}}</b>
+                  <br />
+                  {{description}}
+                  <ul>
+                    {{#each attributes}}
+                      <li>
+                        <i><b>{{name}}</b></i>
+                        <br />
+                        {{description}}
+                        <br />
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              {{#each properties}}
+                <li>
+                  <b>{{name}}</b>
+                  <br />
+                  {{description}}
+                  <br />
+                  <ul>
+                    {{#each values}}
+                      <li>
+                        <i><b>{{value}}</b></i>
+                        <br />
+                        {{description}}
+                        <br />
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              {{#each functions}}
+                <li>
+                  <b>{{name}}</b>
+                  <br />
+                  {{description}}
+                  <br />
+                  <ul>
+                    {{#each parameters}}
+                      <li>
+                        <i><b>{{name}}</b></i>
+                        <br />
+                        {{type}}
+                        <br />
+                        {{description}}
+                        <br />
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+        </li>
+        <br />
+      {{/each}}
+    </ul>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
