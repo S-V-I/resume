@@ -408,17 +408,20 @@
           <div class='form-label'>{{title}}</div>
 
           <div class='form-check'>
-            <label class='form-check-lable'>
-              {{#each options}}
-                {{this}}
-              {{/each}}
-            </label>
-            <input
-              name='gadgets'
-              type='radio'
-              class='form-check-input'
-            />
+            
+						{{#each options}}
+							
+							{{this}}
+							<label class='form-check-lable'></label>
 
+							<input
+								name='gadgets'
+								type='radio'
+								class='form-check-input'
+							/>
+
+							<div class='form-text'></div>
+						{{/each}}
           </div>
         {{/with}}
 
@@ -448,14 +451,18 @@
             <label class='form-check-label'>
               {{#each options}}
                 {{this}}
-              {{/each}}
-            </label>
+              
+								</label>
 
-            <input
-              type='checkbox'
-              name='factors'
-              class='form-check-input'
-            />
+								<input
+									type='checkbox'
+									name='factors'
+									class='form-check-input'
+								/>
+
+								<div class='form-text'></div>
+
+							{{/each}}
           {{/with}}
 
         </div>
