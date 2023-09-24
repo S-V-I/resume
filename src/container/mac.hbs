@@ -1,0 +1,233 @@
+{{! 
+Це код container файлу для сторінки bio, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+<div>
+  <h1>{{name}}</h1>
+
+  <h2>
+    {{description}},
+    <br />
+    $
+    {{price}},
+    <br />
+    {{category}}
+  </h2>
+
+</div>
+<hr />
+<br />
+
+<div>
+  <h2>Features</h2>
+
+  {{#with features}}
+    <b>PROCESSOR:</b>
+    <ul>
+      {{#with processor}}
+        <li>
+          <b>Brand:</b>
+          {{brand}}
+        </li>
+        <li>
+          <b>Model:</b>
+          {{model}}
+        </li>
+        <li>
+          <b>Speed:</b>
+          {{speed}}
+        </li>
+        <li>
+          <b>Cores:</b>
+          {{cores}}
+        </li>
+        <li>
+          <b>Cache:</b>
+          {{cache}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>MEMORY:</b>
+    <ul>
+      {{#with memory}}
+        <li>
+          <b>Type:</b>
+          {{type}}
+        </li>
+        <li>
+          <b>Size:</b>
+          {{size}}
+        </li>
+        <li>
+          <b>Speed:</b>
+          {{speed}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>STORAGE:</b>
+    <ul>
+      {{#with storage}}
+        <li>
+          <b>Type:</b>
+          {{type}}
+        </li>
+        <li>
+          <b>Size:</b>
+          {{size}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>DISPLAY:</b>
+    <ul>
+      {{#with display}}
+        <li>
+          <b>Size:</b>
+          {{size}}
+        </li>
+        <li>
+          <b>Resolution:</b>
+          {{resolution}}
+        </li>
+        <li>
+          <b>Technology:</b>
+          {{technology}}
+        </li>
+        <li>
+          <b>Color space:</b>
+          {{color_space}}
+        </li>
+        <li>
+          <b>Brightness:</b>
+          {{brightness}}
+        </li>
+        <li>
+          <b>Refresh rate:</b>
+          {{refresh_rate}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>GRAPHICS:</b>
+    <ul>
+      {{#with graphics}}
+        <li>
+          <b>Brand:</b>
+          {{brand}}
+        </li>
+        <li>
+          <b>Model:</b>
+          {{model}}
+        </li>
+        <li>
+          <b>Memory:</b>
+          {{memory}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>PORTS:</b>
+    <ul>
+      {{#each ports}}
+        <li>
+          <b>Type:</b>
+          {{type}}
+        </li>
+        <li>
+          <b>Count:</b>
+          {{count}}
+        </li>
+        <li>
+          <b>Features:</b>
+          <ul>
+            {{#each features}}
+              <li>
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+          <br />
+        </li>
+      {{/each}}
+    </ul>
+    <br />
+
+    <b>BATTERY:</b>
+    <ul>
+      {{#with battery}}
+        <li>
+          <b>Type:</b>
+          {{type}}
+        </li>
+        <li>
+          <b>Capacity:</b>
+          {{capacity}}
+        </li>
+        <li>
+          <b>Life:</b>
+          {{life}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>Weight:</b>
+    {{weight}}
+    <br />
+    <br />
+
+    <b>DIMENSIONS:</b>
+    <ul>
+      {{#with dimensions}}
+        <li>
+          <b>height:</b>
+          {{height}}
+        </li>
+        <li>
+          <b>width:</b>
+          {{width}}
+        </li>
+        <li>
+          <b>depth:</b>
+          {{depth}}
+        </li>
+      {{/with}}
+    </ul>
+    <br />
+
+    <b>Operating system:</b>
+    {{operating_system}}
+    <br />
+    <br />
+
+    <b>ACCESSORIES:</b>
+    <ul>
+      {{#each accessories}}
+        <li>
+          {{name}}
+        </li>
+        <li>
+          ${{price}}
+        </li>
+          <br />
+        </li>
+      {{/each}}
+    </ul>
+    <br />
+
+  {{/with}}
+
+</div>
+<br />
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
