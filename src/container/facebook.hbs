@@ -1,0 +1,175 @@
+{{! 
+Це код container файлу для сторінки bio, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+<h1>{{name}}</h1>
+
+<div>
+  <ul>
+    {{#each users}}
+      <li>
+        ID:
+        {{id}}
+      </li>
+      <li>
+        {{name}}
+      </li>
+      <li>
+        {{gender}}
+      </li>
+      <li>
+        {{age}}
+      </li>
+      <ul>
+        {{#each friends}}
+          <b>Friends:</b>
+          <li>
+            ID:
+            {{id}}
+          </li>
+          <li>
+            {{name}}
+          </li>
+          <li>
+            {{gender}}
+          </li>
+          <li>
+            {{age}}
+          </li>
+          <br />
+          <ul>
+            {{#each mutual_friends}}
+              <b>Mutual friends:</b>
+              <li>
+                ID:
+                {{id}}
+              </li>
+              <li>
+                {{name}}
+              </li>
+              <li>
+                {{gender}}
+              </li>
+              <li>
+                {{age}}
+              </li>
+              <br />
+
+              <ul>
+                {{#each mutual_friends}}
+                  <b>Mutual friends:</b>
+                  <li>
+                    ID:
+                    {{id}}
+                  </li>
+                  <li>
+                    {{name}}
+                  </li>
+                  <li>
+                    {{gender}}
+                  </li>
+                  <li>
+                    {{age}}
+                  </li>
+                  <br />
+                {{/each}}
+              </ul>
+              <br />
+
+            {{/each}}
+
+            <ul>
+              {{#each groups}}
+                <b><i>Groups</i></b>
+                <li>
+                  ID:
+                  {{id}}
+                </li>
+                <li>
+                  <b>{{name}}</b>
+                </li>
+                <li>
+                  {{description}}
+                </li>
+                <br />
+                {{! Pet lovers }}
+
+                <ul>
+                  {{#each members}}
+                    <b><i>Group members</i></b>
+                    <li>
+                      ID:
+                      {{id}}
+                    </li>
+                    <li>
+                      {{name}}
+                    </li>
+                    <li>
+                      {{gender}}
+                    </li>
+                    <li>
+                      {{age}}
+                    </li>
+                    <br />
+                  {{/each}}
+                </ul>
+
+              {{/each}}
+            </ul>
+
+          </ul>
+
+        {{/each}}
+        <br />
+
+        <ul>
+          {{#each groups}}
+            <em><b>Groups</b></em>
+            <li>
+              ID:
+              {{id}}
+            </li>
+            <li>
+              <b>{{name}}</b>
+            </li>
+            <li>
+              {{description}}
+            </li>
+            <br />
+
+            <ul>
+              {{#each members}}
+                <b><i>Group members</i></b>
+                <li>
+                  ID:
+                  {{id}}
+                </li>
+                <li>
+                  {{name}}
+                </li>
+                <li>
+                  {{gender}}
+                </li>
+                <li>
+                  {{age}}
+                </li>
+                <br />
+              {{/each}}
+
+            </ul>
+
+          {{/each}}
+        </ul>
+
+      </ul>
+      <br />
+
+    {{/each}}
+  </ul>
+
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
