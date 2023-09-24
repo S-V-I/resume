@@ -1,48 +1,12 @@
-<main>
-  <h1>
-    Hello!
-    <i class='bi bi-emoji-smile'></i>
-    <i
-      class='fa-brands fa-slack fa-beat fa-lg'
-      style='color: #e36816;'
-    ></i>
-  </h1>
+<main class='p-5'>
+  <h1>Hello world!</h1>
 
-  <button class='btn btn-primary'>
-    <i class='bi bi-sd-card'></i>
-    <i
-      class='fa-brands fa-slack fa-beat fa-lg'
-      style='color: #e36816;'
-    ></i>
-  </button>
+  {{> title data="My title"}}
 
-  <button class='btn btn-outline-primary'>
-    <i class='bi bi-sd-card'></i>
-    <i
-      class='fa-brands fa-slack fa-beat fa-lg'
-      style='color: #e36816;'
-    ></i>
-  </button>
-
-  <h1>
-    <button class='btn btn-warning'>
-      <i class='bi bi-sd-card'></i>
-      <i
-        class='fa-brands fa-slack fa-beat fa-lg'
-        style='color: #e36816;'
-      ></i>
-    </button>
-  </h1>
-
-  <div class='mt-4'>
-    <i
-      class='fa-brands fa-slack fa-beat fa-lg'
-      style='color: #e36816;'
-    ></i>
-  </div>
-
-  <div class='mt-4'>
-    <img src='/svg/slack.svg' alt='slack-image' />
-  </div>
+  <h1 style="background: yellow; color: black">This is text</h1>
+ 
+  {{!-- inline-стилі  мають найбільший пріоритет, 
+  не перезаписуються навіть якщо далі буде 
+  інший стиль --}}
 
 </main>

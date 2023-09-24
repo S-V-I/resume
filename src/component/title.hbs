@@ -1,15 +1,11 @@
 <div>
-
-  {{!-- <div>
+  {{#if big}}
     <h2>{{data}}</h2>
-  </div> --}}
-
-  <div>
-    {{#if big}}
-      <h2>{{data}}</h2>
-    {{else}}
-      <h3>{{data}}</h3>
-    {{/if}}
-  </div>
-
+  {{else}}
+    <h3>{{data}}</h3>
+  {{/if}}
 </div>
+
+<style>
+  h2 { color: green; } h3 { color: green;}
+</style>
