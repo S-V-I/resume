@@ -1,0 +1,207 @@
+{{! 
+Це код container файлу для сторінки bio, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+
+<section>
+  <h1>
+    <span class='badge bg-warning'>{{name}}</span>
+  </h1>
+  <br />
+
+  <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    <h3><i>{{description}}</i></h3>
+  </div>
+    <br />
+
+  <h4>
+    It was invented by
+    <span
+      class='badge rounded-pill text-bg-secondary'
+    >{{history.founder}}</span>
+    
+    in</span>
+    <span
+      class='badge rounded-pill text-bg-success'
+    >{{history.year}}</span>
+  </h4>
+</section>
+
+<section>
+
+  <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Types</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          {{#each types}}
+            <li>
+              <b><i>{{this}}</i></b>
+            </li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div>
+    
+  <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Syntax</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul> 
+          {{#with syntax}}
+          
+            <li> 
+              <h3>Statements</h3>
+              <br>
+
+              <ul>
+                <h4><i>Variables</i></h4>
+                {{#each variables}}
+                  <li>
+                    <b><i>{{this}}</i></b>
+                  </li>
+                {{/each}}
+              </ul>
+              <br>
+
+              <ul>
+                <h4><i>Functions</i></h4>
+                {{#each functions}}
+                  <li>
+                    <b><i>{{this}}</i></b>
+                  </li>
+                {{/each}}
+              </ul>
+              <br>
+
+              <ul>
+                <h4><i>Conditionals</i></h4>
+                {{#each conditionals}}
+                  <li>
+                    <b><i>{{this}}</i></b>
+                  </li>
+                {{/each}}
+              </ul>
+              <br>
+
+              <ul>
+                <h4><i>Loops</i></h4>
+                {{#each loops}}
+                  <li>
+                    <b><i>{{this}}</i></b>
+                  </li>
+                {{/each}}
+              </ul>
+              <br>
+
+              <ul>
+                <h4><i>Classes</i></h4>
+                {{#each classes}}
+                  <li>
+                    <b><i>{{this}}</i></b>
+                  </li>
+                {{/each}}
+              </ul>
+              <br>
+            </li>
+          {{/with}}
+        </ul>
+      </p>
+    </div>
+  </div>
+ 
+  <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Features</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          {{#each features}}
+            <li>
+              <b><i>{{this}}</i></b>
+            </li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Libraries</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          {{#each libraries}}
+            <li>
+              <b><i>{{this}}</i></b>
+            </li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Tools</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          {{#each tools}}
+            <li>
+              <b><i>{{this}}</i></b>
+            </li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </div>  
+
+  <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <h1>
+        <span class='badge bg-danger'>Community</span>
+      </h1>   
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <ul>
+          {{#each community}}
+            <li>
+              <b><i>{{name}}</i></b>
+              <br>
+              <b><i>{{type}}</i></b>
+            </li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </div>  
+</section>
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}

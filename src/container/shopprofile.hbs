@@ -1,6 +1,7 @@
 <main>
 
 	<hr class="my-1">
+
 	 <section class='nav'>
     {{#with navigation}}
       <div class='nav-item'>
@@ -14,6 +15,7 @@
 						</li>
 					{{/each}}
 				</ul>
+
       </div>
     {{/with}}
   </section>
@@ -26,10 +28,13 @@
 			<div class="col-12 mb-3">
 				<div class="nav nav-tabs">
 					{{#each tabs}}
+
 						<a class="nav-link {{#if @first}}active{{/if}} " href="#">{{this}}</a>
+
 					{{/each}}
 				</div>
 			</div>
+
 
 			<div class="row">
 				{{#with actionBlock}}
@@ -240,123 +245,5 @@
     </div>
   </section>
 
-</main>
 
-
-
-
-{{!-- <main>
-  
-        {{#with button}}
-        <a class="btn btn-outline-secondary my-3" href="{{link}}">{{text}}</a>
-      {{/with}}
-    {{/with}}
-  </section>
-  <hr class="mb-5">
-
-  <section>
-    <div class="row">
-      {{#each goodsBlock}}
-        <div class="card my-2 p-2">
-          <div class="card-body col-12">
-            
-            {{> cartGoodsItem}}
-            
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  </section>
-  <hr class="mb-5">
-  
-  <section>
-    {{#with total}}
-      <h4>{{title}}</h4>
-      <h2>{{amount}}</h2>
-      <p>{{delivery}}</p>
-
-      {{#each buttons}}
-        <div class="my-2">
-          <a class="
-          {{#if isSuccess}}
-            btn btn-success
-          {{/if}}
-          {{#if isOutline}}
-            btn btn-outline-success
-          {{/if}}
-          "
-          href="{{link}}">{{text}}</a>
-        </div>
-      {{/each}}
-
-    {{/with}}
-  </section>
-  <hr class="mb-5">
-  
-  <section>
-    <div>
-      {{#with goodsOtherBlock}}
-        <h3 class="text-center">{{title}}</h3>
-      
-      <div class="col-12">
-        <div class="row">
-          {{#each cards}}
-            <div class="card col-4 gx-2">
-              <div class="card-body">
-                <img class="card-img-top" src="{{image}}" alt="{{title}}">
-
-                <h6 class="card-title ">
-                  {{title}}
-                  {{#if isHot}}
-                    <span class="badge text-bg-warning text-uppercase rounded-pill">hot</span>
-                  {{/if}}
-                  {{#if idNew}}
-                    <span class="badge text-bg-primary text-capitalize rounded-pill">нове</span>
-                  {{/if}}
-                </h6>
-
-                <p>{{description}}</p>
-              
-              </div>
-              
-            </div>
-          {{/each}}
-        </div>
-      </div>
-      
-      {{/with}}
-    </div>
-
-  </section>
-  <hr class="mb-5">
-
-  <section>
-    <div class="card bg-dark">
-      {{#with subscribe}}
-        <div class="card-body">
-          <h2 class="text-light">{{header}}</h2>
-          <p class="text-light">{{description}}</p>
-
-          {{#each buttons}}
-            <a class="btn btn-primary my-2" href="link">{{text}}</a>
-            <br>
-          {{/each}}
-        </div>
-      {{/with}}
-    </div>
-  </section>
-  <hr class="mb-5">
-
-  <section class="col-12">
-    <div class="row">
-      {{#each footer}}
-        <div class="col-2 nav">
-          {{#each this}}
-            <a class="nav-link btn btn-link {{#if @last}}disabled{{/if}}" href="{{link}}">{{text}}</a>
-          {{/each}}
-        </div>
-      {{/each}}
-    </div>
-  </section>
-
-</main> --}}
+</main
