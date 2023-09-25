@@ -695,14 +695,13 @@ router.get('/bootstrap', function (req, res) {
 // ================================================================
 
 
-=======
-
-
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+
+=======
 
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -713,12 +712,15 @@ router.get('/shopcatalog', function (req, res) {
 
 =======
 
+
 router.get('/shopprofile', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     layout: 'shop',
+
+=======
 =======
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -740,6 +742,7 @@ router.get('/shoporder', function (req, res) {
 
 
 
+
     navigation: {
       links: [
         {
@@ -748,11 +751,13 @@ router.get('/shoporder', function (req, res) {
         },
         {
 
+
+
+
           text: 'Catalog',
           href: 'https://www.google.com/',
         },
         {
-=======
 
           text: 'Contacts',
           href: 'https://www.google.com/',
@@ -761,6 +766,8 @@ router.get('/shoporder', function (req, res) {
           text: 'Help',
           href: 'https://www.youtube.com/',
         },
+
+=======
 
       ],
     },
@@ -1018,6 +1025,7 @@ router.get('/shoporder', function (req, res) {
       ],
 =======
 
+
       ],
     },
 
@@ -1193,6 +1201,8 @@ router.get('/shoporder', function (req, res) {
       },
     },
 
+
+=======
 =======
 
       ],
@@ -1531,6 +1541,7 @@ router.get('/shoporder', function (req, res) {
 
     },
 
+
     footer: [
       [
         {
@@ -1629,6 +1640,9 @@ router.get('/shoporder', function (req, res) {
 
 // ================================================================
 
+
+// Підключаємо роутер до бек-енду
+=======
 
 // Підключаємо роутер до бек-енду
 =======
@@ -2930,6 +2944,7 @@ router.get('/js', function (req, res) {
 
 
 // Підключаємо роутер до бек-енду
+
 
 
 
