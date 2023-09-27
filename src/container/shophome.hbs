@@ -134,14 +134,14 @@
   </section>
   <hr class='my-5' />
 
-  <section class="row">
-    <div class="col-12">
+  <section class="col-12">
+    <div class="row">
       {{#each footer}}
-        {{#each .}}
-          <div class="col-2">
-            <a href="{{link}}">{{text}}</a>
-          </div>
-        {{/each}}
+        <div class="col-2 nav">
+          {{#each this}}
+            <a class="nav-link btn btn-link {{#if @last}}disabled{{/if}}" href="{{link}}">{{text}}</a>
+          {{/each}}
+        </div>
       {{/each}}
     </div>
   </section>
