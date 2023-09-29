@@ -2,7 +2,7 @@
 Це код container файлу для сторінки bio, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
 }}
-<div>
+<div class='m-5'>
   <h1>{{name}}</h1>
 
   <h2>
@@ -15,15 +15,14 @@
   </h2>
 
 </div>
-<hr />
-<br />
+<hr class='m-5' />
 
-<div>
+<div class='m-5'>
   <h2>Features</h2>
 
   {{#with features}}
-    <b>PROCESSOR:</b>
-    <ul>
+    <b class='text-uppercase'>processor:</b>
+    <ul class='mb-4'>
       {{#with processor}}
         <li>
           <b>Brand:</b>
@@ -47,10 +46,9 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>MEMORY:</b>
-    <ul>
+    <b class='text-uppercase'>memory:</b>
+    <ul class='mb-4'>
       {{#with memory}}
         <li>
           <b>Type:</b>
@@ -66,10 +64,9 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>STORAGE:</b>
-    <ul>
+    <b class='text-uppercase'>storage:</b>
+    <ul class='mb-4'>
       {{#with storage}}
         <li>
           <b>Type:</b>
@@ -81,10 +78,9 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>DISPLAY:</b>
-    <ul>
+    <b class='text-uppercase'>display:</b>
+    <ul class='mb-4'>
       {{#with display}}
         <li>
           <b>Size:</b>
@@ -112,10 +108,9 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>GRAPHICS:</b>
-    <ul>
+    <b class='text-uppercase'>graphics:</b>
+    <ul class='mb-4'>
       {{#with graphics}}
         <li>
           <b>Brand:</b>
@@ -131,10 +126,9 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>PORTS:</b>
-    <ul>
+    <b class='text-uppercase'>ports:</b>
+    <ul class='mb-4'>
       {{#each ports}}
         <li>
           <b>Type:</b>
@@ -157,10 +151,9 @@
         </li>
       {{/each}}
     </ul>
-    <br />
 
-    <b>BATTERY:</b>
-    <ul>
+    <b class='text-uppercase'>battery:</b>
+    <ul class='mb-4'>
       {{#with battery}}
         <li>
           <b>Type:</b>
@@ -176,15 +169,14 @@
         </li>
       {{/with}}
     </ul>
-    <br />
 
-    <b>Weight:</b>
+    <b class='text-uppercase mb-4'>weight:</b>
     {{weight}}
     <br />
     <br />
 
-    <b>DIMENSIONS:</b>
-    <ul>
+    <b class='text-uppercase'>dimensions:</b>
+    <ul class='mb-4'>
       {{#with dimensions}}
         <li>
           <b>height:</b>
@@ -202,30 +194,26 @@
     </ul>
     <br />
 
-    <b>Operating system:</b>
+    <b class='text-uppercase'>operating system:</b>
     {{operating_system}}
     <br />
     <br />
 
-    <b>ACCESSORIES:</b>
+    <b class='text-uppercase'>accessories:</b>
     <ul>
       {{#each accessories}}
         <li>
           {{name}}
         </li>
-        <li>
+        <li class='mb-3'>
           ${{price}}
-        </li>
-          <br />
         </li>
       {{/each}}
     </ul>
-    <br />
 
   {{/with}}
 
 </div>
-<br />
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

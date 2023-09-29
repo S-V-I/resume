@@ -40,9 +40,103 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    pages: {
+      title: 'Список сторінок',
+      description: 'Інформація про проект',
+      list: [
+        {
+          name: 'summary',
+          href: '/summary',
+        },
+        {
+          name: 'skills',
+          href: '/skills',
+        },
+        {
+          name: 'education',
+          href: '/education',
+        },
+        {
+          name: 'work',
+          href: '/work',
+        },
+        {
+          name: 'person',
+          href: '/person',
+        },
+        {
+          name: 'bio',
+          href: '/bio',
+        },
+        {
+          name: 'program',
+          href: '/program',
+        },
+        {
+          name: 'web',
+          href: '/web',
+        },
+        {
+          name: 'js',
+          href: '/js',
+        },
+        {
+          name: 'car',
+          href: '/car',
+        },
+        {
+          name: 'mac',
+          href: '/mac',
+        },
+        {
+          name: 'facebook',
+          href: '/facebook',
+        },
+        {
+          name: 'task21',
+          href: '/task21',
+        },
+        {
+          name: 'task22',
+          href: '/task22',
+        },
+        {
+          name: 'task31',
+          href: '/task31',
+        },
+        {
+          name: 'shophome',
+          href: '/shophome',
+        },
+        {
+          name: 'shoporder',
+          href: '/shoporder',
+        },
+        {
+          name: 'shopcart',
+          href: '/shopcart',
+        },
+        {
+          name: 'shopprofile',
+          href: '/shopprofile',
+        },
+        {
+          name: 'shopreview',
+          href: '/shopreview',
+        },
+        {
+          name: 'shopcatalog',
+          href: '/shopcatalog',
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -1494,6 +1588,7 @@ router.get('/shophome', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
@@ -2393,6 +2488,7 @@ router.get('/shopprofile', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
@@ -2689,6 +2785,7 @@ router.get('/shopreview', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
