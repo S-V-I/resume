@@ -4,29 +4,31 @@
 }}
 
 <div>
-    {{#with main}}
-        <main>
-            <section>
-            
-                {{> title data=summary.title big=true}}
-            
-            <div>
-                <p>{{summary.text}}</p>
-            </div>
-            </section>
 
-            {{#with experience}}
-                <section>
-                    <div>
-                          {{> title data=title big=false}}
-                    </div>
-                    <div>
-                        <p>{{text}}</p>
-                    </div>
-                </section>
-            {{/with}}
-        </main>
-    {{/with}}
+	{{#with main}}
+			<main>
+					<section>
+					
+							{{> title data=summary.title big=true}}
+					
+					<div>
+							<p>{{summary.text}}</p>
+					</div>
+					</section>
+
+					{{#with experience}}
+							<section>
+									<div>
+												{{> title data=title big=false}}
+									</div>
+									<div>
+											<p>{{text}}</p>
+									</div>
+							</section>
+					{{/with}}
+			</main>
+	{{/with}}
+
 </div>
 
 {{!-- щоб не повторювати башато разів "social" - використовуємо "#with"

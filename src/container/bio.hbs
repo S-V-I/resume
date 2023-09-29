@@ -3,13 +3,13 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
 }}
 
-<section>
+<section class='mx-5 my-4'>
   <div>
     <h1>{{name}}</h1>
   </div>
 
   <div>
-    <b>Born</b>
+    <b class='text-capitalize'>born</b>
     -
     <i>{{birthdate}}</i>,
     <br />
@@ -17,7 +17,7 @@
 
     <br />
     <br />
-    <b>Died</b>
+    <b class='text-capitalize'>died</b>
     -
     <i>{{deathdate}}</i>,
     <br />
@@ -26,21 +26,21 @@
   <br />
 
   <div>
-    <b>Nationality - </b>
+    <b class='text-capitalize'>citizenship - </b>
     {{nationality}}
   </div>
 </section>
 <hr />
 
-<section>
+<section class='mx-5 my-3'>
   <div>
-    <b>Occupation - </b>
+    <h4>Occupation</h4>
     {{occupation}}
   </div>
   <br />
 
   <div>
-    <h3>Education</h3>
+    <h4>Education</h4>
     {{#each education}}
       {{institution}},
       {{year}}
@@ -53,7 +53,7 @@
   <br />
 
   <div>
-    <h3>Known for</h3>
+    <h4>Known for</h4>
     <ul>
       {{#each known_for}}
         <li>{{this}}</li>
@@ -62,7 +62,7 @@
   </div>
 
   <div>
-    <h3>Notable publications</h3>
+    <h4>Notable publications</h4>
     <ul>
       {{#each notable_publications}}
         <li>
@@ -76,9 +76,9 @@
   </div>
 </section>
 
-<section>
+<section class='mx-5'>
   <div>
-    <h3>Spouses</h3>
+    <h4>Spouses</h4>
     <ul>
       {{#each partners}}
         <li>
@@ -88,14 +88,15 @@
           <br />
           {{relationship}}
         </li>
+        <br />
       {{/each}}
     </ul>
   </div>
 </section>
 
-<section>
+<section class='mx-5'>
   <div>
-    <h3>Awards</h3>
+    <h4>Awards</h4>
     {{#each awards}}
       {{title}},
       {{year}}
@@ -106,7 +107,7 @@
   <br />
 
   <div>
-    <h3>Influenced by</h3>
+    <h4>Influenced by</h4>
     <ul>
       {{#each influences}}
         <li>{{this}}</li>
@@ -116,7 +117,7 @@
   <br />
 
   <div>
-    <h3>Influenced</h3>
+    <h4>Influenced</h4>
     <ul>
       {{#each influenced}}
         <li>{{this}}</li>
@@ -126,7 +127,7 @@
   <br />
 
   <div>
-    <h3>Quotes</h3>
+    <h4>Quotes</h4>
     <ul>
       {{#each quotes}}
         <q><li>{{this}}</li></q>
@@ -136,7 +137,7 @@
   <br />
 
   <div>
-    <h3>Major discoveries</h3>
+    <h4>Major discoveries</h4>
     {{#each major_discoveries}}
       {{title}},
       {{year}}
@@ -147,7 +148,7 @@
   <br />
 
   <div>
-    <h3>Contributions</h3>
+    <h4>Contributions</h4>
     {{#with contributions}}
       {{title}},
       {{year}}

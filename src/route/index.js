@@ -40,9 +40,103 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    pages: {
+      title: 'Список сторінок',
+      description: 'Інформація про проект',
+      list: [
+        {
+          name: 'summary',
+          href: 'http://localhost:3000/summary',
+        },
+        {
+          name: 'skills',
+          href: 'http://localhost:3000/skills',
+        },
+        {
+          name: 'education',
+          href: 'http://localhost:3000/education',
+        },
+        {
+          name: 'work',
+          href: 'http://localhost:3000/work',
+        },
+        {
+          name: 'person',
+          href: 'http://localhost:3000/person',
+        },
+        {
+          name: 'bio',
+          href: 'http://localhost:3000/bio',
+        },
+        {
+          name: 'program',
+          href: 'http://localhost:3000/program',
+        },
+        {
+          name: 'web',
+          href: 'http://localhost:3000/web',
+        },
+        {
+          name: 'js',
+          href: 'http://localhost:3000/js',
+        },
+        {
+          name: 'car',
+          href: 'http://localhost:3000/car',
+        },
+        {
+          name: 'mac',
+          href: 'http://localhost:3000/mac',
+        },
+        {
+          name: 'facebook',
+          href: 'http://localhost:3000/facebook',
+        },
+        {
+          name: 'task21',
+          href: 'http://localhost:3000/task21',
+        },
+        {
+          name: 'task22',
+          href: 'http://localhost:3000/task22',
+        },
+        {
+          name: 'task31',
+          href: 'http://localhost:3000/task31',
+        },
+        {
+          name: 'shophome',
+          href: 'http://localhost:3000/shophome',
+        },
+        {
+          name: 'shoporder',
+          href: 'http://localhost:3000/shoporder',
+        },
+        {
+          name: 'shopcart',
+          href: 'http://localhost:3000/shopcart',
+        },
+        {
+          name: 'shopprofile',
+          href: 'http://localhost:3000/shopprofile',
+        },
+        {
+          name: 'shopreview',
+          href: 'http://localhost:3000/shopreview',
+        },
+        {
+          name: 'shopcatalog',
+          href: 'http://localhost:3000/shopcatalog',
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -1494,6 +1588,7 @@ router.get('/shophome', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
@@ -2393,6 +2488,7 @@ router.get('/shopprofile', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
@@ -2689,6 +2785,7 @@ router.get('/shopreview', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
