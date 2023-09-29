@@ -49,87 +49,87 @@ router.get('/', function (req, res) {
       list: [
         {
           name: 'summary',
-          href: 'http://localhost:3000/summary',
+          href: '/summary',
         },
         {
           name: 'skills',
-          href: 'http://localhost:3000/skills',
+          href: '/skills',
         },
         {
           name: 'education',
-          href: 'http://localhost:3000/education',
+          href: '/education',
         },
         {
           name: 'work',
-          href: 'http://localhost:3000/work',
+          href: '/work',
         },
         {
           name: 'person',
-          href: 'http://localhost:3000/person',
+          href: '/person',
         },
         {
           name: 'bio',
-          href: 'http://localhost:3000/bio',
+          href: '/bio',
         },
         {
           name: 'program',
-          href: 'http://localhost:3000/program',
+          href: '/program',
         },
         {
           name: 'web',
-          href: 'http://localhost:3000/web',
+          href: '/web',
         },
         {
           name: 'js',
-          href: 'http://localhost:3000/js',
+          href: '/js',
         },
         {
           name: 'car',
-          href: 'http://localhost:3000/car',
+          href: '/car',
         },
         {
           name: 'mac',
-          href: 'http://localhost:3000/mac',
+          href: '/mac',
         },
         {
           name: 'facebook',
-          href: 'http://localhost:3000/facebook',
+          href: '/facebook',
         },
         {
           name: 'task21',
-          href: 'http://localhost:3000/task21',
+          href: '/task21',
         },
         {
           name: 'task22',
-          href: 'http://localhost:3000/task22',
+          href: '/task22',
         },
         {
           name: 'task31',
-          href: 'http://localhost:3000/task31',
+          href: '/task31',
         },
         {
           name: 'shophome',
-          href: 'http://localhost:3000/shophome',
+          href: '/shophome',
         },
         {
           name: 'shoporder',
-          href: 'http://localhost:3000/shoporder',
+          href: '/shoporder',
         },
         {
           name: 'shopcart',
-          href: 'http://localhost:3000/shopcart',
+          href: '/shopcart',
         },
         {
           name: 'shopprofile',
-          href: 'http://localhost:3000/shopprofile',
+          href: '/shopprofile',
         },
         {
           name: 'shopreview',
-          href: 'http://localhost:3000/shopreview',
+          href: '/shopreview',
         },
         {
           name: 'shopcatalog',
-          href: 'http://localhost:3000/shopcatalog',
+          href: '/shopcatalog',
         },
       ],
     },
